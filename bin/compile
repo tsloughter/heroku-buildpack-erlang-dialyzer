@@ -52,7 +52,8 @@ fi
 
 echo "-----> Building and running Dialyzer"
 unset GIT_DIR
-make dialyzer 2>&1 | sed -u 's/^/       /'
+make 2>&1 | sed -u 's/^/       /'
+make build-plt dialyze 2>&1 | sed -u 's/^/       /'
 #./rebar get-deps compile 2>&1 | sed -u 's/^/       /'
 if [ ${PIPESTATUS[0]} -ne 0 ]; then
   echo "-----> Build failed"
