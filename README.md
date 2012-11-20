@@ -5,10 +5,9 @@ This is a Heroku buildpack for Erlang apps. It uses [Rebar](https://github.com/b
 
 ### Configure your Heroku App
 
-    $ heroku config:add BUILDPACK_URL="https://github.com/archaelus/heroku-buildpack-erlang.git" -a YOUR_APP
-
-or
-    $ heroku create --buildpack "https://github.com/archaelus/heroku-buildpack-erlang.git"
+```shell
+$ heroku create --buildpack "https://github.com/tsloughter/heroku-buildpack-erlang-dialyzer.git"
+```
 
 ### Select an Erlang version
 
@@ -24,8 +23,11 @@ Currently supported OTP versions:
 
 To select the version for your app:
 
-    $ echo OTP_R15B01 > .preferred_otp_version
-    $ git commit "Select R15B01 as preferred OTP version" .preferred_otp_version
+```shell
+$ echo OTP_R15B02 > .preferred_otp_version
+$ git add .preferred_otp_version
+$ git commit -m "Select R15B01 as preferred OTP version"
+```
 
 ### Build your Heroku App
 
