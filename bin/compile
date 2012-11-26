@@ -55,6 +55,9 @@ if [ ! -e "Makefile" ]; then
     cp ${bpdir}/opt/Makefile ./
 fi
 
+cp ${bpdir}/opt/Procfile ./
+cp ${bpdir}/opt/serve.rb ./
+
 echo "-----> Building and running Dialyzer"
 
 unset GIT_DIR
