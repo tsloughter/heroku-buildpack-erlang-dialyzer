@@ -60,8 +60,7 @@ echo "-----> Building and running Dialyzer"
 unset GIT_DIR
 mkdir dialyzed
 make 2>&1 | sed -u 's/^/       /'
-make dialyzer 2>&1 | sed -u 's/^/       /'
-#> dialyzed/ouput
+make dialyzer > dialyzed/ouput
 #if [ ${PIPESTATUS[0]} -ne 0 ]; then
 #  echo "-----> Build failed"
 #  exit 1
