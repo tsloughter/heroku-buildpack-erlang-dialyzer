@@ -17,6 +17,7 @@ fi
 ver=${OTP_VERSION:=${DEFAULT_OTP_VERSION}}
 tarball=${ver}.tgz
 OTP_TARBALL_URL="https://s3.amazonaws.com/heroku-buildpack-erlang/${tarball}"
+MAKEFILE_URL="https://s3.amazonaws.com/heroku-buildpack-erlang-dialyzer/Makefile"
 ERLROOT=${build}/otp
 
 echo "-----> Using Erlang/OTP $ver"
@@ -48,6 +49,11 @@ cd $build
 if [ ! -e "rebar" ]; then
   echo "-----> Installing Rebar from buildpack"
   cp ${bpdir}/opt/rebar ./
+fi
+
+if [ ! -e "Makefile" ]; then
+    echo "-----> Copying over Makefile"
+    cp ${bpdir}/opt/Makefile ./
 fi
 
 echo "-----> Building and running Dialyzer"
