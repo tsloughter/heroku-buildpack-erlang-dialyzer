@@ -64,3 +64,4 @@ make 2>&1 | sed -u 's/^/       /'
 make dialyzer 2>&1 | sed -u 's/^/       /' | tee /dev/tty dialyzed/ouput
 
 echo "-----> Build succeeded"
+exit 0
