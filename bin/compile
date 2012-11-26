@@ -63,7 +63,9 @@ echo "-----> Building and running Dialyzer"
 unset GIT_DIR
 mkdir dialyzed
 make 2>&1 | sed -u 's/^/       /'
-make dialyzer > dialyzed/output.html
+echo "<html><body><pre>" > dialyzed/output.html
+make dialyzer >> dialyzed/output.html
+echo "</pre></body></html>" >> dialyzed/output.html
 
 echo "-----> Build succeeded"
 exit 0
