@@ -64,6 +64,7 @@ unset GIT_DIR
 mkdir dialyzed
 make 2>&1 | sed -u 's/^/       /'
 echo "<html><body><pre>" > dialyzed/output.html
+date >> dialyzed/output.html
 make dialyzer >> dialyzed/output.html
 echo "</pre></body></html>" >> dialyzed/output.html
 
