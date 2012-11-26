@@ -57,6 +57,8 @@ fi
 
 cp ${bpdir}/opt/Procfile ./
 cp ${bpdir}/opt/serve.rb ./
+cp ${bpdir}/opt/Gemfile ./
+cp ${bpdir}/opt/Gemfile.lock ./
 
 echo "-----> Building and running Dialyzer"
 
