@@ -3,7 +3,6 @@
 ##
 # usage: bin/compile <build-dir> <cache-dir>
 
-set -e
 bpdir=$(cd $(dirname $(dirname $0)); pwd)
 mkdir -p "$1" "$2"
 build=$(cd "$1/" && pwd)
