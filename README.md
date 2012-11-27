@@ -1,7 +1,6 @@
 ## Heroku buildpack: Erlang Dialyzer
 
-This is a Heroku buildpack for Erlang apps. It uses [Rebar](https://github.com/basho/rebar).
-
+This is a Heroku buildpack for producing Dialyzer results of an Erlang app.
 
 ### Configure your app
 
